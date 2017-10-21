@@ -13,9 +13,9 @@ in code, the other file will be a test file.
 All of these topics will be covered. If there is no link to the topic
 then I have not gotten to it yet.
 
-### Data Structures
+#### Data Structures
 - Array
-- Linked List
+- [Linked List](Data%Structures/Linked%Lists)
 - Hash Table
 - Stack
 - Queue
@@ -26,16 +26,17 @@ then I have not gotten to it yet.
 - Graph
 - Matrix
 
-### Sorts
+#### Sorts
 - Insertion Sort
 - Merge Sort
 - Bubble Sort
 - Heap Sort
 - Quick Sort
 
-### Searches
+#### Searches
 - Linear Search
 - Binary Search
 
-### Other
+#### Other
+- [Algorithm Efficiency with Big O](Misc/Big%O)
 - Bit Manipulation
