@@ -15,7 +15,7 @@ then I have not gotten to it yet.
 
 #### Data Structures
 - Array
-- [Linked List](Data%Structures/Linked%Lists)
+- [Linked List](Data%20Structures/Linked%20Lists)
 - Hash Table
 - Stack
 - Queue
@@ -38,5 +38,5 @@ then I have not gotten to it yet.
 - Binary Search
 
 #### Other
-- [Algorithm Efficiency with Big O](Misc/Big%O)
+- [Algorithm Efficiency with Big O](Misc/Big%20O)
 - Bit Manipulation
