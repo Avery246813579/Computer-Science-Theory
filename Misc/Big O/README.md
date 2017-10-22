@@ -156,7 +156,25 @@ was what I said, but I didn't state it the way I should of. With Big O
 we can have something called, best, average, and worse cases.
 
 All of our last examples our best, average, and worse case were the
-same. The algorithm would always be what our Big O described.
+same case. The algorithm would always be what our Big O described. We
+can get it so our best case and worse case are different.
+
+    numbers = [1, 2, 3, 4, 5]
+
+    for number in numbers:
+        if number == (some number):
+            break
+
+The code above's worst case is O(n) because if the number we are looking
+for is the last number or doesnt exist then we have to run through our
+full list. The best case is O(1) because if the number we are looking
+for is the first number then we break out of the loop before anything
+happens.
+
+We can then have an average case if we have something that has a worse
+case and best case but we have an average which is what happens the
+most.
+
 
 ### Big O and beyond
 
