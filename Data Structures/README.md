@@ -1,3 +1,4 @@
 # Data Structures
 
-Here is a list of Data Structures that I really like!
+- [Hash Tables](Hash%20Tables)
+- [Linked Lists](Linked%20Lists)

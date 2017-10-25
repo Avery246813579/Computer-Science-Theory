@@ -1,44 +1,50 @@
 # Restful Api
 
 Representational state transfer, also known as Restful api, is an
-architectural style and approach to communications often used in web
+architectural style and approach of communications often used in web
 services development. In plain English, Restful api is a guideline that
 most apis run by.
 
 ## Http Requests
 
-With HTTP requests we have a request in which we call something to the
-server, then we have a response in which the server returns back
-information.
+A HTTP requests is called using an HTTP request. In a HTTP request we
+have two big parts. We have a request, in which we send information to
+the server. Then we have a response, in which the server sends
+information back.
 
 Every request and response have headers and a specific route type. Most
-requests have a body, but all responses have a body. A header are
+requests have a body, but all responses have a body. A header is
 information passed to the server during every request. A route type is
 the Restful route name. And the body is the information you will send or
 receive to and from the server.
 
 ## Restful Routes
 
-The five main Restful routes are GET, POST, PATCH, PUT, and DELETE. When
-I refer to route it's the VERB you send to the server. You also can send
-something called a body which will contain for your request.
+To understand Restful Api we have to understand Tthe five main Restful
+routes are GET, POST, PATCH, PUT, and DELETE. When I refer to route it's
+the VERB you send to the server. You also can send something called a
+body which will contain for your request.
 
 #### GET
-The GET route (also known as read) returns back information
-to read. An example would be how browsers call a websites get route
-and your browser interprets that info.
+The GET route (also known as read) returns back information. An example
+would be how browsers call a websites get route and your browser
+interprets that info.
 
 You would call a GET request by calling a plural or single name. For
-example, you can do /dogs to get a list of all the dogs from a server or
-do /dog/:ID to get a single dog from your server.
+example, you can do `/dogs` to get a list of all the dogs from a server or
+do `/dog/:ID` to get a single dog from your server. GET requests have no
+body.
+
 
 #### POST
 The POST route (also know as create) creates somethings. You send
 information about the item you want to create using the body of your
 request. The POST request usually doesn't return anything, but if it
-does it's only an id of what you create.
+does it's only information on the item you create.
 
-Somethings POST can be used for actions in a server.
+Along with creating things, somethings POST can be used for actions in a
+server. Like if I wanted to send an email I would send a POST request to
+my server.
 
 You would send a POST request by calling a singular name without an id.
 To create a new dog you would do `/dog` and pass dog parameters through
@@ -58,10 +64,12 @@ to the body using json.
 #### PUT
 The PUT route in my opinion is the worst Restful route. Like PATCH it
 updates something, but instead of taking in the element you want to
-change, you have to input the full object. This means if you want to
-change the color of a dog, you would have to send the full dog with the
-changed color to the server. Don't use this route, PATCH is better in
-mostly all situations.
+change, you have to input the full object. It's used to replace an item
+while PATCH is to update. This means if you want to change the color of
+a dog, you would have to send the full dog with the changed color to the
+server.
+
+Don't use this route, PATCH is better in mostly all situations.
 
 #### DELETE
 The delete Route deletes something. You would send a DELETE request to
@@ -78,7 +86,7 @@ routes you are suppose to return back specific error codes. I don't like
 this, and other APIs don't like this. The reason I don't like this is
 when I send an API call and it's rejected, I don't want my console to
 be scattered with errors. That's why I (I as in I copied from some api
-I used in the past) have formed convention in returning back info.
+I used in the past) have formed conventions in returning back info.
 
 My convention starts with every API call returning back 200 (success).
 Then the response body will have a few things depending if the request
@@ -93,8 +101,8 @@ variable in our response body. If the information we want is an object
 then we will return a JSON object, if it's a list of objects then we
 will return a list of JSON objects.
 
-For example if we were calling to get a singular dog object, our
-response body would be:
+For example if we were calling to get a singular dog (`/dog/5`) object,
+our response body would be:
 
     {
         "success": true,
@@ -105,7 +113,8 @@ response body would be:
         }
     }
 
-If we were requesting to GET a list of dogs, our response body would be:
+If we were requesting to GET a list of dogs (`/dogs`), our response body
+would be:
 
     {
         "success": true,
@@ -123,7 +132,7 @@ If we were requesting to GET a list of dogs, our response body would be:
         ]
     }
 
-If we were requesting to POST a dog, our response body would be:
+If we were requesting to POST a dog (`/dog`), our response body would be:
 
     {
         "success": true,
@@ -132,14 +141,11 @@ If we were requesting to POST a dog, our response body would be:
         }
     }
 
-If we were requesting an POST action to our server, our response body
-would be:
+If we were requesting an POST action to our server ('/email/:ID'), our
+response body would be:
 
     {
-        "success": true,
-        "data": {
-            "ID": 5
-        }
+        "success": true
     }
 
 #### Unsuccessful Request
@@ -171,6 +177,16 @@ element:
         }
     }
 
+## Constructing the best API
+When constructing the best API, you want your server to make sense. With
+most servers you can get long URL chains because you will have so many
+routes to do so many
+
+Say you want to get the posts that a user has. We would send a request
+to the URL `/user/:ID/posts`. Now if we wanted to see a specific post
+by the user, we could send a request to `/post/:ID` because we just
+care about the POST, not the user.
+
 ## Authentication
 You want to authenticate your user using tokens in a header, or a cookie
 which is in the header. An example would be passing a jwt with a header
@@ -182,6 +198,11 @@ not called for. Headers are used from constant info and cookies are
 stored and send every request. So if I were you, use cookies. You can
 even return back a header called set-cookie which sets a cookie on the
 client side.
+
+We use our authentication key every time a request is send to the
+server. We will be able to get the users unique id by parsing the token
+in which ever way we constructed. For starters, using JWT is best
+practice.
 
 ## Bad Practices
 When you send a request using Restful Api, we only want to do what the
