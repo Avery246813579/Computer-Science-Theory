@@ -39,4 +39,6 @@ then I have not gotten to it yet.
 
 #### Other
 - [Algorithm Efficiency with Big O](Misc/Big%20O)
+- [Restful Api](Misc/Restful%Api)
 - Bit Manipulation
+- Recursion

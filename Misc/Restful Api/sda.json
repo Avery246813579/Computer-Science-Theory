@@ -1,0 +1,8 @@
+{
+    "success": false,
+    "code": 12,
+    "message": "Missing element in request body",
+    "data": {
+        "element": "NAME"
+    }
+}
