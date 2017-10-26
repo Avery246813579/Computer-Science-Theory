@@ -4,6 +4,7 @@ from .LinkedList import LinkedList, Node
 import unittest
 
 
+# This is a cool class!
 class NodeTest(unittest.TestCase):
 
     def test_init(self):
