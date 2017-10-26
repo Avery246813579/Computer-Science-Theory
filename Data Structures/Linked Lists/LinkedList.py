@@ -114,3 +114,32 @@ class LinkedList(object):
                 return current.data  # Constant
 
             current = current.next  # Constant
+
+    def reverse(self):
+        # Next node in the list
+        next_node = self.head.next
+
+        # Previous node in our list
+        previous_node = self.head
+
+        # Our head will be the tail after this is done
+        self.tail = previous_node
+
+        # Will be new last node so we don't want it's next to have anything
+        self.head.next = None
+
+        while next_node is not None:
+            # Set our current node to the current next_node
+            current_node = next_node
+
+            # Set our next node to our currents next
+            next_node = current_node.next
+
+            # Set our current nodes next to the previous node
+            current_node.next = previous_node
+
+            # Set our previous node to our current
+            previous_node = current_node
+
+        # Our last_node is going to be the head now
+        self.head = previous_node

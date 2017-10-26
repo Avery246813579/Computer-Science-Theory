@@ -134,6 +134,24 @@ variable in the node you want to delete. If the node was the list's
 head, assign the next variable to the next head. If the node was the
 tail, assign the tail to the reference to the last node.
 
+#### Reverse (bonus)
+When reversing a Linked List, we want to reverse it internally without
+having to create a separate Linked List and add our nodes to that. To do
+this first create a variable next which will act as the variable that we
+are looping through, and set next to our head. Now we want to set our
+current head's next variable to None because our current head will be
+the new end of the list, and we don't want our end to have a next value.
+Now we set the current head to be the tail of our Linked List because
+it's the new end. Now we can keep looping through until our next
+variable is none, and inside this loop we set a variable named current
+equal to the current next variable. Then set our next variable equal our
+current node's next node. Now we set our current node's next variable to
+be the previous node. Then finally we set our previous node equal to
+our current. Then after the loop runs we set our head to the previous
+node variable.
+
+I can't find nor can create a good diagram for this. You really just
+understand it once you write it out and reverse a Linked List manually.
 
 ## Doubley Linked List
 A Doubly Linked List is just a regular Linked List but instead of the
@@ -151,5 +169,9 @@ little easier (we won't go into that).
 ![Doubley Linked List](assets/DoubleLinkedList.png)
 
 ## When to use a Linked List
-- We care about order
-- We don't care about indexing
+Linked Lists are very useful when you don't care about indexing (getting
+element at certain position) and we do care about order. Linked List's
+are perfect at adding data (O(1)), but less efficient at iterating
+through it's data (O(n)). We usually use Linked Lists when we are adding
+a lot of data and don't traverse it that often.
+

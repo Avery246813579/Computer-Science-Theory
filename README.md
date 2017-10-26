@@ -43,3 +43,6 @@ then I have not gotten to it yet.
 - Bit Manipulation
 - Recursion
 - Base Conversion
+
+## Diagrams
+All my diagrams are made using the website https://www.draw.io/

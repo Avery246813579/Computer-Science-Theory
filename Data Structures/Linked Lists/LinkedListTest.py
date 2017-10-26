@@ -96,6 +96,32 @@ class LinkedListTest(unittest.TestCase):
         assert ll.find(lambda item: item > 'B') == 'C'
         assert ll.find(lambda item: item == 'D') is None
 
+    def test_reverse_three(self):
+        ll = LinkedList()
+        ll.append('1')
+        ll.append('2')
+        ll.append('3')
+        assert ll.items() == ['1', '2', '3']
+        ll.reverse()
+        assert ll.items() == ['3', '2', '1']
+
+    def test_reverse_two(self):
+        ll = LinkedList()
+        ll.append('1')
+        ll.append('2')
+        assert ll.items() == ['1', '2']
+        ll.reverse()
+        print(ll)
+        assert ll.items() == ['2', '1']
+
+    def test_reverse_one(self):
+        ll = LinkedList()
+        ll.append('1')
+        assert ll.items() == ['1']
+        ll.reverse()
+        print(ll)
+        assert ll.items() == ['1']
+
 
 if __name__ == '__main__':
     unittest.main()
