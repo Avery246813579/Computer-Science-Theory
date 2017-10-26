@@ -1,6 +1,8 @@
-# Big O
+# Big O Notation
 
-Big O is used for describing the complexity and performance of an
+# Interesting note: O stands for Omega
+
+Big O Notation is used for describing the complexity and performance of an
 algorithm. With Big O we can get something called the best, average, and
 worse case of an algorithm. Big O is important for seeing how an
 algorithm will scale up.
