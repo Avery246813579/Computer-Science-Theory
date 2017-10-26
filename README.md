@@ -42,3 +42,4 @@ then I have not gotten to it yet.
 - [Restful Api](Misc/Restful%20Api)
 - Bit Manipulation
 - Recursion
+- Base Conversion
