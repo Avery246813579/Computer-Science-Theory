@@ -17,8 +17,8 @@ then I have not gotten to it yet.
 - Array
 - [Linked List](Data%20Structures/Linked%20Lists)
 - [Hash Table](Data%20Structures/Hash%20Tables)
-- Stack
-- Queue
+- [Stack](Data%20Structures/Stack)
+- [Queue](Data%20Structures/Queue)
 - Tree
 - Binary Tree
 - Binary Search Tree
@@ -43,7 +43,7 @@ then I have not gotten to it yet.
 - Bit Manipulation
 - Recursion
 - Base Conversion
-- SQL
+- [SQL](Misc/SQL)
 
 ## Diagrams
 All my diagrams are made using the website https://www.draw.io/
