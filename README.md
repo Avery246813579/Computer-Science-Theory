@@ -16,7 +16,7 @@ then I have not gotten to it yet.
 #### Data Structures
 - Array
 - [Linked List](Data%20Structures/Linked%20Lists)
-- Hash Table
+- [Hash Table](Data%20Structures/Hash%20Tables)
 - Stack
 - Queue
 - Tree
@@ -43,6 +43,11 @@ then I have not gotten to it yet.
 - Bit Manipulation
 - Recursion
 - Base Conversion
+- SQL
 
 ## Diagrams
 All my diagrams are made using the website https://www.draw.io/
+
+## Help me Help you
+If you don't understand a part of my explanation, or you feel something
+is wrong. Submit a pull request or open a issue and I'll fix it!
