@@ -28,14 +28,17 @@ then I have not gotten to it yet.
 
 #### Sorts
 - Insertion Sort
+- Selection Sort
 - Merge Sort
 - Bubble Sort
 - Heap Sort
 - Quick Sort
+- Shell Sort
 
 #### Searches
 - Linear Search
 - Binary Search
+- Interpolation Search
 
 #### Other
 - [Algorithm Efficiency with Big O](Misc/Big%20O)
@@ -44,6 +47,10 @@ then I have not gotten to it yet.
 - Recursion
 - Base Conversion
 - [SQL](Misc/SQL)
+
+## Altering Needed
+#### Linked Lists
+- Add Circular Linked Lists
 
 ## Diagrams
 All my diagrams are made using the website https://www.draw.io/
