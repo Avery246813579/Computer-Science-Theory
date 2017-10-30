@@ -1,6 +1,6 @@
 #!python
 
-from .LinkedList import LinkedList, Node
+from .DoubleLinkedList import DoubleyLinkedList, Node
 import unittest
 
 
@@ -16,17 +16,17 @@ class NodeTest(unittest.TestCase):
 class LinkedListTest(unittest.TestCase):
 
     def test_init(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         assert ll.head is None
         assert ll.tail is None
 
     def test_init_with_list(self):
-        ll = LinkedList(['A', 'B', 'C'])
+        ll = DoubleyLinkedList(['A', 'B', 'C'])
         assert ll.head.data == 'A'
         assert ll.tail.data == 'C'
 
     def test_items(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         assert ll.items() == []
         ll.append('A')
         assert ll.items() == ['A']
@@ -36,7 +36,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.items() == ['A', 'B', 'C']
 
     def test_length(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         assert ll.length() == 0
         ll.append('A')
         assert ll.length() == 1
@@ -46,7 +46,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.length() == 3
 
     def test_append(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('A')
         assert ll.head.data == 'A'
         assert ll.tail.data == 'A'
@@ -58,7 +58,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.tail.data == 'C'
 
     def test_prepend(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.prepend('C')
         assert ll.head.data == 'C'
         assert ll.tail.data == 'C'
@@ -70,7 +70,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.tail.data == 'C'
 
     def test_delete(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('A')
         ll.append('B')
         ll.append('C')
@@ -87,7 +87,7 @@ class LinkedListTest(unittest.TestCase):
             ll.delete('D')
 
     def test_find(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('A')
         ll.append('B')
         ll.append('C')
@@ -97,7 +97,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.find(lambda item: item == 'D') is None
 
     def test_reverse_three(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('1')
         ll.append('2')
         ll.append('3')
@@ -106,7 +106,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.items() == ['3', '2', '1']
 
     def test_reverse_two(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('1')
         ll.append('2')
         assert ll.items() == ['1', '2']
@@ -114,14 +114,14 @@ class LinkedListTest(unittest.TestCase):
         assert ll.items() == ['2', '1']
 
     def test_reverse_one(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('1')
         assert ll.items() == ['1']
         ll.reverse()
         assert ll.items() == ['1']
 
     def test_size(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         assert ll.size() == 0
         ll.append('4')
         ll.append('3')
@@ -132,7 +132,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.size() == 0
 
     def test_at_index(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('4')
         ll.append('3')
         assert ll.at_index(-1) is None
@@ -143,7 +143,7 @@ class LinkedListTest(unittest.TestCase):
         assert ll.at_index(0) == '3'
 
     def test_insert(self):
-        ll = LinkedList()
+        ll = DoubleyLinkedList()
         ll.append('4')
         ll.append('3')
         ll.insert(0, '2')
@@ -153,7 +153,17 @@ class LinkedListTest(unittest.TestCase):
         ll.insert(2, '8')
         assert ll.items() == ['2', '4', '8', '3', '9']
 
-
+    def test_last(self):
+        ll = DoubleyLinkedList()
+        ll.append('4')
+        ll.append('3')
+        assert ll._at_index(0).last is None
+        assert ll._at_index(1).last.data == '4'
+        ll.insert(1, '7')
+        assert ll._at_index(2).last.data == '7'
+        assert ll._at_index(1).last.data == '4'
+        ll.delete('3')
+        assert ll._at_index(1).last.data == '4'
 
 
 if __name__ == '__main__':

@@ -1,21 +1,17 @@
-#!python
-
-from __future__ import print_function
-
-
 class Node(object):
 
     def __init__(self, data):
         """Initialize this node with the given data"""
         self.data = data
         self.next = None
+        self.last = None
 
     def __repr__(self):
         """Return a string rxepresentation of this node"""
         return 'Node({})'.format(repr(self.data))
 
 
-class LinkedList(object):
+class DoubleyLinkedList(object):
 
     def __init__(self, iterable=None):
         """Initialize this linked list; append the given items, if any"""
@@ -62,6 +58,7 @@ class LinkedList(object):
             self.head = new_node  # Constant
         else:
             self.tail.next = new_node  # Constant
+            new_node.last = self.tail
 
         self.tail = new_node  # Constant
 
@@ -74,7 +71,7 @@ class LinkedList(object):
         if self.head is None:  # Constant
             self.head = new_node  # Constant
             self.tail = self.head  # Constant
-        else: # Our Linked List is not empty. Set new nodes next to the previous head and set our new node as the head
+        else:  # Our Linked List is not empty. Set new nodes next to the previous head and set our new node as the head
             new_node.next = self.head  # Constant
             self.head = new_node  # Constant
 
@@ -96,6 +93,9 @@ class LinkedList(object):
                 else:
                     # We aint the head so we set the last nodes head to the next node (could be null. We don't care)
                     last.next = current_node.next  # Constant
+
+                    if current_node.next is not None:
+                        current_node.next.last = last
 
                 self.count -= 1  # Constant
                 return  # Stop checking. Don't return an error
@@ -163,8 +163,13 @@ class LinkedList(object):
 
         new_node = Node(data)
 
+        if at_index.next is not None:
+            at_index.next.last = new_node
+
         new_node.next = at_index.next
         at_index.next = new_node
+
+        new_node.last = at_index
 
     def find(self, quality):  # O(N)
         """Return an item from this linked list satisfying the given quality"""
@@ -196,6 +201,9 @@ class LinkedList(object):
             # Set our next node to our currents next
             next_node = current_node.next
 
+            # Set our previous node last value to the current node
+            previous_node.last = current_node
+
             # Set our current nodes next to the previous node
             current_node.next = previous_node
 
@@ -205,13 +213,5 @@ class LinkedList(object):
         # Our last_node is going to be the head now
         self.head = previous_node
 
-    def iterable(self):
-        data = []
-
-        current = self.head
-        while current is not None:
-            data.append(current.data)
-
-            current = current.next
-
-        return data
+        # Take away our heads last
+        self.head.last = None

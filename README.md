@@ -47,6 +47,7 @@ then I have not gotten to it yet.
 - Recursion
 - Base Conversion
 - [SQL](Misc/SQL)
+- Threading
 
 ## Altering Needed
 #### Linked Lists
