@@ -25,6 +25,9 @@ then I have not gotten to it yet.
 - Heap
 - Graph
 - Matrix
+- Set
+- Maps
+- Circular Buffer
 
 #### Sorts
 - Insertion Sort
