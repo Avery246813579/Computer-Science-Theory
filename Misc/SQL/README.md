@@ -14,6 +14,10 @@ like MongoDB represent data in collections.
 There are lot's of pros and cons of each type, but today we will just
 focus on Relational Databases.
 
+## Queries
+- Should be all uppercase
+- Can be seperated by ;
+
 ## Databases
 Creating a Database is quite easy. We just need to create a query that
 is `CREATE DATABASE` then the name of the database we want to create.
@@ -97,17 +101,41 @@ assign it to. An example would be
 Note: For SQL it's `ALTER COLUMN` but with MySQL we use `MODIFY COLUMN`.
 
 ## Inserting Data
+    INSERT INTO table_name (column) VALUES (value)
 
 ## Finding Data
 
+SELECT * FROM Table WHERE Column=Values
+
+SELECT column_name(s) FROM table_name WHERE condition LIMIT number;
+
+
 ## Updating Data
+
+UPDATE Table SET column=data WHERE column=data
 
 ## Deleting Data
 
+DELETE FROM Table WHERE column=data
+
+## Like
+
+Start:
+    SELECT * FROM Customers WHERE CustomerName LIKE 'a%';
+
+End:
+    SELECT * FROM Customers WHERE CustomerName LIKE '%a';
+
+Start:
+    SELECT * FROM Customers WHERE CustomerName LIKE '%a%';
+
+## SQL Injection
+Ratatat
+
 ## The Great Beyond
+Checkout W3SCHOOLS
 
 #### Foreign Keys
-
-#### Multi-line
+FOREIGN KEY (PersonID) REFERENCES Persons(PersonID)
 
 ## Conclusion

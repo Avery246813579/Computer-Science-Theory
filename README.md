@@ -51,6 +51,7 @@ then I have not gotten to it yet.
 - Base Conversion
 - [SQL](Misc/SQL)
 - Threading
+- Garbage Collector
 
 ## Altering Needed
 #### Linked Lists
