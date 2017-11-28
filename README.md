@@ -54,8 +54,8 @@ then I have not gotten to it yet.
 - Garbage Collector
 
 ## Altering Needed
-#### Linked Lists
-- Add Circular Linked Lists
+- Write code snippets in all languages
+- Add Circular Buffer
 
 ## Diagrams
 All my diagrams are made using the website https://www.draw.io/
