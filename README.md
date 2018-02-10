@@ -28,6 +28,13 @@ then I have not gotten to it yet.
 - Set
 - Maps
 - Circular Buffer
+- Vector
+- MultiBag (Multiset)
+- Trie
+- Radix Tree
+- B Trees
+- Red Black Tree
+- AVL
 
 #### Sorts
 - Insertion Sort
@@ -37,6 +44,7 @@ then I have not gotten to it yet.
 - Heap Sort
 - Quick Sort
 - Shell Sort
+- Radix Sort
 
 #### Searches
 - Linear Search
@@ -50,6 +58,7 @@ then I have not gotten to it yet.
 - Recursion
 - Base Conversion
 - [SQL](Misc/SQL)
+- NoSQL
 - Threading
 - Garbage Collector
 
