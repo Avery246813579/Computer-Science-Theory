@@ -25,4 +25,5 @@ This contains helpful things I found in interviews.
 - Remember to check if you have to return something 
 - Remember in place vs returned 
 - Check spelling errors
-- While doing a while loop with an iterator. Don't forget to increment it``
+- While doing a while loop with an iterator. Don't forget to increment it.
+- If you are interating through a matrix. Remember both parts of the array.
