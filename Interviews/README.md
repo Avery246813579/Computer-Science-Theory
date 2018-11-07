@@ -30,3 +30,7 @@ This contains helpful things I found in interviews.
 - If you are interating through a matrix. Remember both parts of the array.
 - Remember to check variable names and constant values to be correct
 - More test cases
+- Check edge cases
+- Divide and Conquer when you can (Sorting)
+- When computing large numbers, go to binary
+- Make sure your sudo code does what your notes do
