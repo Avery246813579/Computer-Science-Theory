@@ -28,3 +28,4 @@
 - Sort will first go by letters. If you are using numbers make sure to do custom sort
 - Use .pop instead of splice(length - 1, 1)
 - Make sure to call function after defining closure
+- Make sure you are using new
