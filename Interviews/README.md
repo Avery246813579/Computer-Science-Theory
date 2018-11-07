@@ -2,10 +2,11 @@
 
 This contains helpful things I found in interviews.
 
-## Avery's Five Step Method
+## Avery's Six Step Method
 1. Understand the Question
 1. Brain Storm Solutions
-1. Sudo Code and Test
+1. Test Cases with Brainstorm
+1. Sudo Code
 1. Code
 1. Optimize and Big O(n)
 
@@ -27,3 +28,5 @@ This contains helpful things I found in interviews.
 - Check spelling errors
 - While doing a while loop with an iterator. Don't forget to increment it.
 - If you are interating through a matrix. Remember both parts of the array.
+- Remember to check variable names and constant values to be correct
+- More test cases
