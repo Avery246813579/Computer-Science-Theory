@@ -25,7 +25,7 @@ then I have not gotten to it yet.
 - Heap
 - Graph
 - Matrix
-- Set
+- [Set](Data%20Structures/Set)
 - Maps
 - Circular Buffer
 - Vector
