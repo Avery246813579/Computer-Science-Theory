@@ -62,6 +62,9 @@ then I have not gotten to it yet.
 - Threading
 - Garbage Collector
 
+### Other Todos
+- Write unit tests for all code
+
 ## Altering Needed
 - Write code snippets in all languages
 - Add Circular Buffer
